@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <!-- Link to static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake News Detection</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="textInput">Enter News Text:</label>
+                <textarea id="textInput" name="text_input" rows="6" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Predict</button>
+            </div>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <!-- Link to static JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
